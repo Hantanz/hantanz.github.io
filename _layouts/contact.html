@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- header section start -->
+   {% include head.html %}
+   <!-- header section end -->
+ 
+   <body>
+     
+   <!-- navbar start -->
+     {% include navbar.html %}
+   <!-- navbar end -->
+    
+    <div class="hero-wrap" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="/">Home</a></span> <span>{{ page.layout }}</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">Contact Information</h2>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-3">
+            <p><span>Address:</span><br> {{ site.address }}</p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Phone:</span><br> <a href="tel://{{ site.phone }}">{{ site.phone }}</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Email:</span><br> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Website</span><br> <a href="https://{{ site.website }}">{{ site.website }}</a></p>
+          </div>
+        </div>
+      </div>
+
+      {% include contact_block.html %}
+
+      </div>
+    </section>
+
+    {% include footer.html %}
+    
+  </body>
+</html>

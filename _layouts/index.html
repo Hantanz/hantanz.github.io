@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- header section start -->
+   {% include head.html %}
+   <!-- header section end -->
+	<style>
+		.index-head{
+			background-color: rgb(0,0,0,0.5);
+		}
+	</style>
+   <body>
+     
+   <!-- navbar start -->
+     {% include navbar.html %}
+   <!-- navbar end -->
+    
+    <div class="hero-wrap" style="background-image: url('images/{{ page.cover_img }}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="index-head row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <div class="mb-4 display-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{ page.title }}</div>
+            <h3 class="mb-5 text-light" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{ page.slogan }}</h3>
+
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://vimeo.com/45830194" class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span class="icon-play mr-2"></span>Watch Video</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include call_to_action.html %}
+
+    <!-- Announcement Section -->
+	<section>
+		<div class="container-fluid bg-success">
+			<div class="row mt-5 mb-5 pt-3 pb-3 text-light h3">
+				<marquee class="d-flex" behavior="scroll" direction="left" scrollamount=10>
+					{{ site.announcement }}
+				</marquee>
+			</div>
+		</div>
+	</section>
+    <!-- Announcement Section End -->
+
+	<!-- Services Section -->
+    <section class="ftco-section bg-light">
+    	<div class="container-fluid">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-5 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Services</h2>
+            <p>{{ page.services_description }}</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="carousel-cause owl-carousel">
+						{% for service in site.services %}
+	    				<div class="item">
+	    					<div class="cause-entry">
+		    					<a href="#" class="img" style="background-image: url(images/cause-1.jpg);"></a>
+		    					<div class="text p-3 p-md-4">
+		    						<h3><a href="#">{{ service.title }}</a></h3>
+		    						<p>
+										{{ service.description }}
+									</p>
+		    						<span class="donation-time mb-3 d-block">
+										{{ service.from }} - {{ service.to }}
+									</span>
+									<div class="progress custom-progress-success">
+									<div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+		    					</div>
+		    				</div>
+	    				</div>
+						{% endfor %}
+
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+	<!-- Services Section End -->
+
+	<!-- Key People Section -->
+    <section class="ftco-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Key People</h2>
+            <p>
+				{{ page.key_people_description }}
+			</p>
+          </div>
+        </div>
+        <div class="row">
+			{% for member in site.data.committee limit:3 %}
+        	<div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+        			<div class="d-flex">
+        				<div class="img" style="background-image: url(images/committee/{{ member.image }});"></div>
+        				<div class="info ml-4">
+        					<h3>{{ member.name }}</a></h3>
+        					<span class="position">{{ member.identity }}</span>
+        					<div class="text">
+		        				<p class="h6">{{ member.designation }}</p>
+		        			</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+			{% endfor %}
+        	
+        </div>
+      </div>
+    </section>
+	<!-- Key People Section End -->
+
+	<!-- Gallery Section -->
+    <section class="ftco-gallery">
+    	<div class="d-md-flex flex-md-wrap">
+			{% assign image_files = site.static_files %}
+			{% for image in image_files %}
+				{% if image.path contains 'images/gallery/home' %}
+						<a href="images/{{ image.name }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/{{ image.name }});">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search"></span>
+							</div>
+						</a>
+				{% endif %}
+			{% endfor %}
+    	</div>
+    </section>
+	<!-- Gallery Section End -->
+
+	<!-- News Section -->
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Latest News Items</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+			{% for item in site.news limit:3 %}
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry align-self-stretch">
+					<a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+					</a>
+					<div class="text p-4 d-block">
+						<div class="meta mb-3 d-flex justify-content-between">
+						<div><span class="icon-calendar"></span> {{ item.date | date_to_string }}</a></div>
+						<div><span class="icon-user"></span> {{ item.author }}</a></div>
+						</div>
+						<h3 class="heading mt-3"><a href="#">{{ item.title }}</a></h3>
+						<p>{{ item.short | slice: 0, 100}}...</p>
+					</div>
+					</div>
+				</div>
+		  	{% endfor %}
+
+        </div>
+      </div>
+    </section>
+	<!-- News Section End -->
+		
+	{% include contact_block.html %}
+
+    {% include footer.html %}
+    
+  </body>
+</html>

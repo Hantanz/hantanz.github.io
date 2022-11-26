@@ -1,0 +1,25 @@
+name: YMHA Kandy
+logo: logo.png
+baseurl: ""
+description: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+announcement: This is an announcement with data and time included | 25/11/2022
+
+served_count: 2450
+donate_message: Donate as much as you can for the successful service of YMHA
+contribute_message: If you can help us in any other ways, please contact us.
+
+address: No. 100, Peradeniya road, Kandy, Sri Lanka.
+phone: +94 81 2204 324
+email: ymhakandy@gmail.com
+website: www.ymhakandy.org
+
+collections:
+  services:
+    output: true
+    permalink: /services/:title
+  gallery:
+    output: true
+    permalink: /gallery/:image
+  news:
+    output: true
+    permalink: /news/:title

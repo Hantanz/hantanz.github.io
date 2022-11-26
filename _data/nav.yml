@@ -1,0 +1,20 @@
+- top: "about"
+  link: "/about"
+
+# - top: "services"
+#   link: "/services"
+
+- top: "events"
+  link: "/events"
+
+- top: "gallery"
+  link: "/gallery"
+
+- top: "archieve"
+  link: "/archieve"
+
+- top: "contact"
+  link: "/contact"
+
+- top: "donate"
+  link: "/donate"

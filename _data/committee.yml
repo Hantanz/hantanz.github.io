@@ -1,0 +1,35 @@
+- name: Madhushan
+  designation: President
+  identity: Computer Engineer
+  image: madhushan.jpg
+  contact: email@gmail.com
+
+- name: Dhushintha
+  designation: Secretary
+  identity: Mechanical Engineer
+  image: madhushan.jpg
+  contact: long_email_for_test@gmail.com
+
+- name: Suresh
+  designation: Treasurer
+  identity: DSP Kandy Marketing
+  image: madhushan.jpg
+  contact: email@gmail.com
+
+- name: Subramani
+  designation: Vice President
+  identity: General Steel
+  image: madhushan.jpg
+  contact: email@gmail.com
+
+- name: Cathy
+  designation: Vice Secaratary
+  identity: Mountain Gold House
+  image: madhushan.jpg
+  contact: email@gmail.com
+
+- name: Dilrukshan
+  designation: Editor
+  identity: Doctor
+  image: madhushan.jpg
+  contact: email@gmail.com
