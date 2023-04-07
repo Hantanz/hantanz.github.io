@@ -1,8 +1,8 @@
 - top: "about"
   link: "/about"
 
-# - top: "services"
-#   link: "/services"
+- top: "services"
+  link: "/services"
 
 - top: "events"
   link: "/events"
