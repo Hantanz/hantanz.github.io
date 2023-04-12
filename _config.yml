@@ -24,3 +24,5 @@ collections:
   news:
     output: true
     permalink: /news/:title
+
+destination: docs
