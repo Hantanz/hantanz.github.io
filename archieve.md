@@ -1,4 +1,4 @@
 ---
-title: News Archieve
-layout: news-archieve
+title: Archieve
+layout: archieve
 ---
